@@ -48,7 +48,7 @@ def get_credentials(region):
 
 def get_jwt_token(region):
     uid, password = get_credentials(region)
-    jwt_url = f"https://nexux-plays.vercel.app//token?uid={uid}&password={password}"
+    jwt_url = f"https://nexux-play-nine.vercel.app/token?uid={uid}&password={password}"
     response = requests.get(jwt_url)
     if response.status_code != 200:
         return None
